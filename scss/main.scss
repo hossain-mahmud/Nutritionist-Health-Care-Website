@@ -1,13 +1,87 @@
 @forward "./base/index";
 @use "./util/index";
-/* --------- variables link css part end --------- */
-/* ========== fonts link css part start ========== */
 
+@mixin paragraph{
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    font-family: index.$Urbanist;
+    color: index.$Grey20;
+}
 
+/* ========== hero css part start ========== */
+#hero .row{
+    padding: 0;
+}
+#hero .row>* {
+    padding-left: 0;
+    padding-right: 0;
+}
+.hero_image{
+    width: 650px;
+    overflow: hidden;
+}
+.hero_image image{
+    border-radius: 0 0 50px 0;
+}
+.hero_left{
+    padding: 120px 0;
+}
+.hero_texts h2{
+    font-size: 22px;
+    font-weight: 600;
+    font-family: index.$Urbanist;
+    color: index.$Dark-Green15;
+    position: relative;
+    margin-bottom: 10px;
+}
+.hero_texts h2::after {
+    content: "";
+    width: 302px;
+    height: 3px;
+    background: #cbea7b;
+    position: absolute;
+    bottom: -26%;
+    left: 0;
+}
+.hero_texts h1{
+    width: 476px;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: index.$Urbanist;
+    color: index.$Dark-Green15;
+    margin-bottom: 16px;
+}
+.hero_texts p{
+    width: 610px;
+    @include paragraph();
 
-
-
-/* --------- fonts link css part end --------- */
+}
+.hero_buttons{
+    margin-top: 40px;
+    display: flex;
+    gap: 14px;
+}
+.hero_button_one{
+    padding: 14px 16px;
+    background: index.$Green70;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: index.$Urbanist;
+    color: index.$Grey15;
+}
+.hero_button_two{
+    padding: 14px 20px;
+    background: index.$Green95;
+    border: 1px solid index.$Green85;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: index.$Urbanist;
+    color: index.$Grey15;
+}
+/* --------- hero css part end --------- */
 /* ========== fonts link css part start ========== */
 
 
