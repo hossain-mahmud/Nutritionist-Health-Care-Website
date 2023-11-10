@@ -54,11 +54,11 @@
 }
 .hero_texts p{
     width: 610px;
-    @include paragraph();
+    @include paragraph;
 
 }
 .hero_buttons{
-    margin-top: 40px;
+    margin: 40px 0 50px 0;
     display: flex;
     gap: 14px;
 }
@@ -70,6 +70,11 @@
     font-weight: 600;
     font-family: index.$Urbanist;
     color: index.$Grey15;
+    transition: all linear .3s;
+}
+.hero_button_one:hover{
+    background: index.$Dark-Green15;
+    color: index.$Grey97;
 }
 .hero_button_two{
     padding: 14px 20px;
@@ -80,6 +85,47 @@
     font-weight: 600;
     font-family: index.$Urbanist;
     color: index.$Grey15;
+    transition:  all linear .3s;
+}
+.hero_button_two:hover{
+    background: index.$Dark-Green15;
+    color: index.$Grey97;
+}
+.hero_customers{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.customers_images{
+    width: 102px;
+    padding: 6px 8px;
+    border-radius: 58px;
+    border: 1px solid index.$Green70;
+    display: flex;
+}
+.customers_img{
+    width: 40px;
+} 
+.customers_img img{
+    border-radius: 50%;
+}
+.img_2{
+    margin-left: -15px;
+}
+.img_3{
+    margin-left: -15px;
+}
+.customers_text p{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: index.$Urbanist;
+    color: index.$Dark-Green20;
+}
+.customers_text p span{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: index.$Urbanist;
+    color: index.$Dark-Green40;
 }
 /* --------- hero css part end --------- */
 /* ========== fonts link css part start ========== */
