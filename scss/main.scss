@@ -8,10 +8,25 @@
     font-family: index.$Urbanist;
     color: index.$Grey20;
 }
-
+@mixin section_head{
+    font-size: 38px;
+    font-weight: 700;
+    font-family: index.$Urbanist;
+    color: index.$Grey15;
+    margin-bottom: 6px;
+    text-align: center
+}
+.common_section_head h2{
+    @include section_head;
+}
+.common_section_head p{
+    @include paragraph;
+    text-align: center;
+    margin-bottom: 60px;
+}
 /* ========== hero css part start ========== */
 #hero .row{
-    padding: 0;
+    padding:  0;
 }
 #hero .row>* {
     padding-left: 0;
@@ -25,7 +40,7 @@
     border-radius: 0 0 50px 0;
 }
 .hero_left{
-    padding: 120px 0;
+    padding: 97px 0;
 }
 .hero_texts h2{
     font-size: 22px;
@@ -128,11 +143,61 @@
     color: index.$Dark-Green40;
 }
 /* --------- hero css part end --------- */
-/* ========== fonts link css part start ========== */
+/* ========== features css part start ========== */
+#features{
+    padding-top: 100px;
+}
+#features .row{
+    row-gap: 20px;
+}
+.features_card{
+    padding: 40px;
+    background: index.$Green95;
+    border: 1px solid index.$Green85;
+    border-radius: 10px;
+}
+.features_card_head{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card_head_icon{
+    padding: 12px;
+    background: index.$Green70;
+    border-radius: 6px;
+}
+.card_head_text h4{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: index.$Urbanist;
+    color: index.$Grey15;
+}
+.card_para p{
+    margin-top: 20px;
+    @include paragraph;
+}
+/* --------- features css part end --------- */
+/* ========== features css part start ========== */
 
 
 
 
 
 
-/* --------- fonts link css part end --------- */
+/* --------- features css part end --------- */
+/* ========== features css part start ========== */
+
+
+
+
+
+
+/* --------- features css part end --------- */
+/* ========== features css part start ========== */
+
+
+
+
+
+
+/* --------- features css part end --------- */
