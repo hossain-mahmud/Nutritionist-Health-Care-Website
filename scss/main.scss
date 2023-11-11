@@ -1,14 +1,15 @@
 @forward "./base/index";
 @use "./util/index";
 
-@mixin paragraph{
+@mixin paragraph {
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
     font-family: index.$Urbanist;
     color: index.$Grey20;
 }
-@mixin section_head{
+
+@mixin section_head {
     font-size: 38px;
     font-weight: 700;
     font-family: index.$Urbanist;
@@ -16,70 +17,87 @@
     margin-bottom: 6px;
     text-align: center
 }
-.common_section_head h2{
-    @include section_head;
+
+.common_section_head {
+    h2 {
+        @include section_head;
+    }
+
+    p {
+        width: 780px;
+        @include paragraph;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
 }
-.common_section_head p{
-    width: 780px;
-    @include paragraph;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 60px;
-}
+
+
 /* ========== hero css part start ========== */
-#hero .row{
-    padding:  0;
+#hero .row {
+    padding: 0;
 }
+
 #hero .row>* {
     padding-left: 0;
     padding-right: 0;
 }
-.hero_image{
+
+.hero_image {
     width: 650px;
     overflow: hidden;
+
+    image {
+        border-radius: 0 0 50px 0;
+    }
 }
-.hero_image image{
-    border-radius: 0 0 50px 0;
-}
-.hero_left{
+
+.hero_left {
     padding: 97px 0;
 }
-.hero_texts h2{
-    font-size: 22px;
-    font-weight: 600;
-    font-family: index.$Urbanist;
-    color: index.$Dark-Green15;
-    position: relative;
-    margin-bottom: 10px;
-}
-.hero_texts h2::after {
-    content: "";
-    width: 302px;
-    height: 3px;
-    background: #cbea7b;
-    position: absolute;
-    bottom: -26%;
-    left: 0;
-}
-.hero_texts h1{
-    width: 476px;
-    font-size: 48px;
-    font-weight: 700;
-    font-family: index.$Urbanist;
-    color: index.$Dark-Green15;
-    margin-bottom: 16px;
-}
-.hero_texts p{
-    width: 610px;
-    @include paragraph;
 
+.hero_texts {
+    h2 {
+        font-size: 22px;
+        font-weight: 600;
+        font-family: index.$Urbanist;
+        color: index.$Dark-Green15;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    h2::after {
+        content: "";
+        width: 302px;
+        height: 3px;
+        background: #cbea7b;
+        position: absolute;
+        bottom: -26%;
+        left: 0;
+    }
+
+    h1 {
+        width: 476px;
+        font-size: 48px;
+        font-weight: 700;
+        font-family: index.$Urbanist;
+        color: index.$Dark-Green15;
+        margin-bottom: 16px;
+    }
+
+    p {
+        width: 610px;
+        @include paragraph;
+    }
 }
-.hero_buttons{
+
+.hero_buttons {
     margin: 40px 0 50px 0;
     display: flex;
     gap: 14px;
 }
-.hero_button_one{
+
+.hero_button_one {
     padding: 14px 16px;
     background: index.$Green70;
     border-radius: 6px;
@@ -89,11 +107,13 @@
     color: index.$Grey15;
     transition: all linear .3s;
 }
-.hero_button_one:hover{
+
+.hero_button_one:hover {
     background: index.$Dark-Green15;
     color: index.$Grey97;
 }
-.hero_button_two{
+
+.hero_button_two {
     padding: 14px 20px;
     background: index.$Green95;
     border: 1px solid index.$Green85;
@@ -102,118 +122,145 @@
     font-weight: 600;
     font-family: index.$Urbanist;
     color: index.$Grey15;
-    transition:  all linear .3s;
+    transition: all linear .3s;
 }
-.hero_button_two:hover{
+
+.hero_button_two:hover {
     background: index.$Dark-Green15;
     color: index.$Grey97;
 }
-.hero_customers{
+
+.hero_customers {
     display: flex;
     align-items: center;
     gap: 6px;
 }
-.customers_images{
+
+.customers_images {
     width: 102px;
     padding: 6px 8px;
     border-radius: 58px;
     border: 1px solid index.$Green70;
     display: flex;
 }
-.customers_img{
+
+.customers_img {
     width: 40px;
-} 
-.customers_img img{
-    border-radius: 50%;
+
+    img {
+        border-radius: 50%;
+    }
 }
-.img_2{
+
+.img_2 {
     margin-left: -15px;
 }
-.img_3{
+
+.img_3 {
     margin-left: -15px;
 }
-.customers_text p{
-    font-size: 18px;
-    font-weight: 600;
-    font-family: index.$Urbanist;
-    color: index.$Dark-Green20;
+
+.customers_text {
+    p {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: index.$Urbanist;
+        color: index.$Dark-Green20;
+    }
+
+    p span {
+        font-size: 18px;
+        font-weight: 700;
+        font-family: index.$Urbanist;
+        color: index.$Dark-Green40;
+    }
 }
-.customers_text p span{
-    font-size: 18px;
-    font-weight: 700;
-    font-family: index.$Urbanist;
-    color: index.$Dark-Green40;
-}
+
 /* --------- hero css part end --------- */
 /* ========== features css part start ========== */
-#features{
+#features {
     padding-top: 100px;
 }
-.features_card{
+
+.features_card {
     padding: 40px;
     background: index.$Green95;
     border: 1px solid index.$Green85;
     border-radius: 10px;
 }
-.features_card_head{
+
+.features_card_head {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.card_head_icon{
+
+.card_head_icon {
     padding: 12px;
     background: index.$Green70;
     border-radius: 6px;
 }
-.card_head_text h4{
+
+.card_head_text h4 {
     font-size: 20px;
     font-weight: 600;
     font-family: index.$Urbanist;
     color: index.$Grey15;
 }
-.card_para p{
+
+.card_para p {
     margin-top: 20px;
     @include paragraph;
 }
+
 /* --------- features css part end --------- */
 /* ========== blog css part start ========== */
-#blog{
+#blog {
     padding-top: 100px;
 }
-.blog_card{
+
+.blog_card {
     padding: 30px;
     background: index.$Green95;
     border-radius: 10px;
-    border:  1px solid index.$Green90;
+    border: 1px solid index.$Green90;
     overflow: hidden;
 }
-.blog_card_image{
+
+.blog_card_image {
     width: 100%;
-    height:336px;
     overflow: hidden;
     border-radius: 12px;
+
+    img {
+        transition: all linear .7s;
+    }
 }
-.blog_card_image img{
-    transition: all linear .7s;
-}
-.blog_card:hover .blog_card_image img{
+
+.blog_card:hover .blog_card_image img {
     transform: scale(1.2) rotate(-3deg);
 }
-.blog_card_head p{
-    padding: 40px 0 2px 0;
-    @include paragraph;
+
+.blog_card_head {
+    p {
+        padding: 40px 0 2px 0;
+        @include paragraph;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: 600;
+        font-family: index.$Urbanist;
+        color: index.$Grey15;
+    }
 }
-.blog_card_head h2{
-    font-size: 22px;
-    font-weight: 600;
-    font-family: index.$Urbanist;
-    color: index.$Grey15;
-}
-.blog_card_paragraph p{
+
+.blog_card_paragraph p {
     margin: 20px 0;
     @include paragraph;
 }
-.card_author{
+
+.card_author {
     padding: 16px;
     background: index.$Green97;
     border-radius: 10px;
@@ -222,43 +269,53 @@
     justify-content: space-between;
     align-items: center;
 }
-.author_info{
+
+.author_info {
     display: flex;
     align-items: center;
     gap: 14px;
 }
-.author_image{
+
+.author_image {
     width: 50px;
     overflow: hidden;
 }
-.author_name h3{
-    font-size: 18px;
-    font-weight: 600;
-    font-family: index.$Urbanist;
-    color: index.$Dark-Green15;
+
+.author_name {
+    h3 {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: index.$Urbanist;
+        color: index.$Dark-Green15;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: index.$Urbanist;
+        color: index.$Grey35;
+    }
 }
-.author_name p{
-    font-size: 16px;
-    font-weight: 500;
-    font-family: index.$Urbanist;
-    color: index.$Grey35;
-}
-.blog_save{
+
+.blog_save {
     display: flex;
     gap: 8px;
+
+    .blog_button {
+        padding: 14px;
+        background: index.$Green95;
+        border: 1px solid index.$Green90;
+        border-radius: 6px;
+        font-size: 18px;
+        color: index.$Grey30;
+        transition: all linear .3s;
+    }
+
+    .blog_button:hover {
+        color: index.$Dark-Green15;
+    }
 }
-.blog_save .blog_button{
-    padding: 14px;
-    background: index.$Green95;
-    border: 1px solid index.$Green90;
-    border-radius: 6px;
-    font-size: 18px;
-    color: index.$Grey30;
-    transition: all linear .3s;
-}
-.blog_save .blog_button:hover{
-    color: index.$Dark-Green15;
-}
+
 /* --------- blog css part end --------- */
 /* ========== features css part start ========== */
 
