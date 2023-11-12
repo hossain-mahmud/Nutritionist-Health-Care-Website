@@ -1,23 +1,14 @@
 @forward "./base/index";
 @use "./util/index";
 
-@mixin section_head {
-    font-size: 38px;
-    font-weight: 700;
-    font-family: index.$Urbanist;
-    color: index.$Grey15;
-    margin-bottom: 6px;
-    text-align: center
-}
-
 .common_section_head {
     h2 {
-        @include section_head;
+        @include index.section_head;
     }
 
     p {
         width: 780px;
-        @include paragraph;
+        @include index.paragraph;
         text-align: center;
         margin: 0 auto;
         margin-bottom: 60px;
@@ -78,7 +69,7 @@
 
     p {
         width: 610px;
-        @include paragraph;
+        @include index.paragraph; 
     }
 }
 
@@ -201,7 +192,7 @@
 
 .card_para p {
     margin-top: 20px;
-    @include paragraph;
+    @include index.paragraph;
 }
 
 /* --------- features css part end --------- */
@@ -235,7 +226,7 @@
 .blog_card_head {
     p {
         padding: 40px 0 2px 0;
-        @include paragraph;
+        @include index.paragraph;
     }
 
     h2 {
@@ -248,7 +239,7 @@
 
 .blog_card_paragraph p {
     margin: 20px 0;
-    @include paragraph;
+    @include index.paragraph;
 }
 
 .card_author {
@@ -334,7 +325,7 @@
     }
 
     .testimonial_text p {
-        @include paragraph;
+        @include index.paragraph;
     }
 
     .customer_part {
@@ -355,7 +346,7 @@
     }
 
     .customer_name h3 {
-        @include paragraph;
+        @include index.paragraph;
         font-weight: 600;
     }
 
@@ -462,7 +453,7 @@
 .nav_text p {
     text-align: center;
     margin-bottom: 40px;
-    @include paragraph;
+    @include index.paragraph;
 }
 
 .nav_slider {
@@ -482,13 +473,13 @@
     }
 
     p {
-        @include paragraph;
+        @include index.paragraph;
     }
 }
 
 .nav_slider_paragraph p {
     margin: 30px 0;
-    @include paragraph;
+    @include index.paragraph;
 }
 
 .nav_slider_price {
@@ -505,7 +496,7 @@
     }
 
     p {
-        @include paragraph;
+        @include index.paragraph;
     }
 }
 
