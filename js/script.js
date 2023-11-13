@@ -12,7 +12,6 @@ window.addEventListener('scroll', () => {
     }
 })
 
-
 $('.testimonial_items').slick({
     autoplay: true,
     autoplaySpeed: 1000,
@@ -47,8 +46,6 @@ $('.testimonial_items').slick({
         }
       ]
 });
-
-
 
 $('.nav_slider_items').slick({
     autoplay: true,
